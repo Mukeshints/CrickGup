@@ -2,14 +2,15 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
+    "version": "1.56.2",
     "configurations": [
 
         {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "m:\\Project\\CricGub-without-header-an-footer\\CricCub\\index.html"
+            "file": "m:\\Project\\CricGub-without-header-an-footer\\CricCub\\index.html",
+           
         }
     ]
 }
