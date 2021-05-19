@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CricGup</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/icc-ranking-page.css" />
+    <link rel="stylesheet" href="css/country-flag.css" />
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="main cricranking">
+                <div class="p-5 bg-white rounded shadow mb-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Audio file -->
+                            <audio src="celebration.mpeg" id="my_audio"></audio>
+                            <!-- Bordered tabs-->
+                            <ul id="myTab1" role="tablist"
+                                class="nav nav-tabs nav-pills with-arrow flex-row text-center">
+                                <li class="nav-item flex-sm-fill">
+                                    <a id="home1-tab" data-toggle="tab" href="#testmatch" onclick="counterfn()"
+                                        role="tab" aria-controls="testmatch" aria-selected="true"
+                                        class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 border active">TEST</a>
+                                </li>
+                                <li class="nav-item flex-sm-fill">
+                                    <a id="profile1-tab" data-toggle="tab" href="#odi" onclick="counterfn()" role="tab"
+                                        aria-controls="odi" aria-selected="false"
+                                        class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 border">ODI</a>
+                                </li>
+                                <li class="nav-item flex-sm-fill">
+                                    <a id="contact1-tab" data-toggle="tab" href="#t20" onclick="counterfn()" role="tab"
+                                        aria-controls="t20" aria-selected="false"
+                                        class="nav-link text-uppercase font-weight-bold rounded-0 border">T20I</a>
+                                </li>
+                            </ul>
+                            <div id="myTab1Content" class="tab-content ">
+                                <div id="testmatch" role="tabpanel" aria-labelledby="home-tab"
+                                    class="tab-pane fade show active">
+                                    <div class="row">
+                                        <div class="col-xl-12 info-wrapwer">
+                                            <div class="title"><span>TEST</span> Men's Test Team Ranking
+                                                <span class="text-dark">Last Updated on 26/04/2021</span>
+                                            </div>
+                                            <div class="no-1 flex-row mt-n3">
+                                                <div class="number">
+                                                    <h1>1</h1>
+                                                    <div id="flag"><span
+                                                            class="t-flag-30 flag-IND"></span><br /><strong>INDIA</strong>
+
+                                                    </div>
+                                                </div>
+                                                <div id="rating"><span class="rank">Rating</span>
+                                                    <span class="counter-count">
+                                                        120</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <table class="table table-content table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>POS</th>
+                                                        <th>Team</th>
+                                                        <th>Rating</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>                                                        <td class="rank">2</td>
+                                                        <td>
+                                                            <span class="t-flag-15 NZ mt-1"></span>
+                                                            <span class="t-name-15 ">New Zealand</span>
+                                                            <span class="t-name-mobile">NZ</span>
+                                                        </td>
+                                                        <td>
+                                                            118
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">3</td>
+                                                        <td>
+                                                            <span class="t-flag-15 AUS mt-1"></span>
+                                                            <span class="t-name-15 "> Australia</span>
+                                                            <span class="t-name-mobile">AUS</span>
+                                                        </td>
+                                                        <td>
+                                                            113
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">4</td>
+                                                        <td>
+                                                            <span class="t-flag-15 ENG mt-1"></span>
+                                                            <span class="t-name-15 ">England</span>
+                                                            <span class="t-name-mobile">ENG</span>
+                                                        </td>
+                                                        <td>
+                                                            106
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">5</td>
+                                                        <td>
+                                                            <span class="t-flag-15 PAK mt-1"></span>
+                                                            <span class="t-name-15 ">Pakistan</span>
+                                                            <span class="t-name-mobile">PAK</span>
+                                                        </td>
+                                                        <td>
+                                                            90
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">6</td>
+                                                        <td>
+                                                            <span class="t-flag-15 SA mt-1"></span>
+                                                            <span class="t-name-15 ">South Africa</span>
+                                                            <span class="t-name-mobile">SA</span>
+                                                        </td>
+                                                        <td>
+                                                            89
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">7</td>
+                                                        <td>
+                                                            <span class="t-flag-15 SL mt-1"></span>
+                                                            <span class="t-name-15 ">Sri Lanka</span>
+                                                            <span class="t-name-mobile">SL</span>
+                                                        </td>
+                                                        <td>
+                                                            83
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">8</td>
+                                                        <td>
+                                                            <span class="t-flag-15 WI mt-1"></span>
+                                                            <span class="t-name-15 ">West Indies </span>
+                                                            <span class="t-name-mobile">WI</span>
+                                                        </td>
+                                                        <td>
+                                                            81
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">9</td>
+                                                        <td>
+                                                            <span class="t-flag-15 BAN mt-1"></span>
+                                                            <span class="t-name-15 ">Bangladesh</span>
+                                                            <span class="t-name-mobile">BAN</span>
+                                                        </td>
+                                                        <td>
+                                                            51
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">10</td>
+                                                        <td>
+                                                            <span class="t-flag-15 ZIM mt-1"></span>
+                                                            <span class="t-name-15">Zimbabwe</span>
+                                                            <span class="t-name-mobile">ZIM</span>
+                                                        </td>
+                                                        <td>
+                                                            29
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="odi" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade ">
+                                    <div class="row">
+                                        <div class="col-xl-12 info-wrapwer">
+                                            <div class="title"><span>ODI</span> Men's ODI Team Ranking
+                                                <span class="text-dark">Last Updated on 26/04/2021</span>
+                                            </div>
+                                            <div class="no-1 flex-row mt-n3">
+                                                <div class="number">
+                                                    <h1>1</h1>
+                                                    <div id="flag"><span
+                                                            class="t-flag-30 flag-IND"></span><br /><strong>INDIA</strong>
+
+                                                    </div>
+                                                </div>
+                                                <div id="rating"><span class="rank">Rating</span>
+                                                    <span class="counter-count">
+                                                        262</span></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-12">
+                                            <table class="table table-content table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>POS</th>
+                                                        <th>Team</th>
+                                                        <th>Rating</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="rank">2</td>
+                                                        <td>
+                                                            <span class="t-flag-15 IND mt-1"></span>
+                                                            <span class="t-name-15">INDIA</span>
+                                                            <span class="t-name-mobile">IND</span>
+                                                        </td>
+                                                        <td>
+                                                            261
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">3</td>
+                                                        <td>
+                                                            <span class="t-flag-15 NZ mt-1"></span>
+                                                            <span class="t-name-15 ">New Zealand</span>
+                                                            <span class="t-name-mobile">NZ</span>
+                                                        </td>
+                                                        <td>
+                                                            260
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">4</td>
+                                                        <td>
+                                                            <span class="t-flag-15 AUS mt-1"></span>
+                                                            <span class="t-name-15 "> Australia</span>
+                                                            <span class="t-name-mobile">AUS</span>
+                                                        </td>
+                                                        <td>
+                                                            255
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="rank">5</td>
+                                                        <td>
+                                                            <span class="t-flag-15 PAK mt-1"></span>
+                                                            <span class="t-name-15 ">Pakistan</span>
+                                                            <span class="t-name-mobile">PAK</span>
+                                                        </td>
+                                                        <td>
+                                                            240
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">6</td>
+                                                        <td>
+                                                            <span class="t-flag-15 SA mt-1"></span>
+                                                            <span class="t-name-15 ">South Africa</span>
+                                                            <span class="t-name-mobile">SA</span>
+                                                        </td>
+                                                        <td>
+                                                            249
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">7</td>
+                                                        <td>
+                                                            <span class="t-flag-15 SL mt-1"></span>
+                                                            <span class="t-name-15 ">Sri Lanka</span>
+                                                            <span class="t-name-mobile">SL</span>
+                                                        </td>
+                                                        <td>
+                                                            230
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">8</td>
+                                                        <td>
+                                                            <span class="t-flag-15 WI mt-1"></span>
+                                                            <span class="t-name-15 ">West Indies </span>
+                                                            <span class="t-name-mobile">WI</span>
+                                                        </td>
+                                                        <td>
+                                                            228
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">9</td>
+                                                        <td>
+                                                            <span class="t-flag-15 BAN mt-1"></span>
+                                                            <span class="t-name-15 ">Bangladesh</span>
+                                                            <span class="t-name-mobile">BAN</span>
+                                                        </td>
+                                                        <td>
+                                                            226
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">10</td>
+                                                        <td>
+                                                            <span class="t-flag-15 ZIM mt-1"></span>
+                                                            <span class="t-name-15">Zimbabwe</span>
+                                                            <span class="t-name-mobile">ZIM</span>
+                                                        </td>
+                                                        <td>
+                                                            191
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="t20" role="tabpanel" aria-labelledby="contact-tab" class="tab-pane fade ">
+                                    <div class="row">
+                                        <div class="col-xl-12 info-wrapwer">
+                                            <div class="title"><span>T20I</span> Men's T2OI Team Ranking
+                                                <span class="text-dark">Last Updated on 26/04/2021</span>
+                                            </div>
+                                            <div class="no-1 flex-row mt-n3">
+                                                <div class="number">
+                                                    <h1>1</h1>
+                                                    <div id="flag"><span
+                                                            class="t-flag-30 ENG border"></span><br /><strong>ENG</strong>
+
+                                                    </div>
+                                                </div>
+                                                <div id="rating"><span class="rank">Rating</span>
+                                                    <span class="counter-count">
+                                                        272</span></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-12">
+                                            <table class="table table-content table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>POS</th>
+                                                        <th>Team</th>
+                                                        <th>Rating</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="rank">2</td>
+                                                        <td>
+                                                            <span class="t-flag-15 IND mt-1"></span>
+                                                            <span class="t-name-15">INDIA</span>
+                                                            <span class="t-name-mobile">IND</span>
+                                                        </td>
+                                                        <td>
+                                                            270
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">3</td>
+                                                        <td>
+                                                            <span class="t-flag-15 AUS mt-1"></span>
+                                                            <span class="t-name-15 "> Australia</span>
+                                                            <span class="t-name-mobile">AUS</span>
+                                                        </td>
+                                                        <td>
+                                                            267
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">4</td>
+                                                        <td>
+                                                            <span class="t-flag-15 PAK mt-1"></span>
+                                                            <span class="t-name-15 ">Pakistan</span>
+                                                            <span class="t-name-mobile">PAK</span>
+                                                        </td>
+                                                        <td>
+                                                            260
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">5</td>
+                                                        <td>
+                                                            <span class="t-flag-15 NZ mt-1"></span>
+                                                            <span class="t-name-15 ">New Zealand</span>
+                                                            <span class="t-name-mobile">NZ</span>
+                                                        </td>
+                                                        <td>
+                                                            118
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="rank">6</td>
+                                                        <td>
+                                                            <span class="t-flag-15 SA mt-1"></span>
+                                                            <span class="t-name-15 ">South Africa</span>
+                                                            <span class="t-name-mobile">SA</span>
+                                                        </td>
+                                                        <td>
+                                                            89
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">7</td>
+                                                        <td>
+                                                            <span class="t-flag-15 SL mt-1"></span>
+                                                            <span class="t-name-15 ">Sri Lanka</span>
+                                                            <span class="t-name-mobile">SL</span>
+                                                        </td>
+                                                        <td>
+                                                            83
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">8</td>
+                                                        <td>
+                                                            <span class="t-flag-15 WI mt-1"></span>
+                                                            <span class="t-name-15 ">West Indies </span>
+                                                            <span class="t-name-mobile">WI</span>
+                                                        </td>
+                                                        <td>
+                                                            81
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">9</td>
+                                                        <td>
+                                                            <span class="t-flag-15 BAN mt-1"></span>
+                                                            <span class="t-name-15 ">Bangladesh</span>
+                                                            <span class="t-name-mobile">BAN</span>
+                                                        </td>
+                                                        <td>
+                                                            51
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="rank">10</td>
+                                                        <td>
+                                                            <span class="t-flag-15 ZIM mt-1"></span>
+                                                            <span class="t-name-15">Zimbabwe</span>
+                                                            <span class="t-name-mobile">ZIM</span>
+                                                        </td>
+                                                        <td>
+                                                            29
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <div class="bg-dark">
+                                    <h3 class="main-text text-white p-4 rlt">Some Important information that give a
+                                        better
+                                        experiance with
+                                        CricGup
+                                </div>
+                                </h3>
+                            </div>
+                            <div class="col-md-12">
+                                <div class=" d-inline-flex mb-3 border border-warning">
+                                    <div class="svg-t-wraper p-3">
+                                        <h1>A</h1>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="check-double" class="svg-inline--fa fa-check-double fa-w-16"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M505 174.8l-39.6-39.6c-9.4-9.4-24.6-9.4-33.9 0L192 374.7 80.6 263.2c-9.4-9.4-24.6-9.4-33.9 0L7 302.9c-9.4 9.4-9.4 24.6 0 34L175 505c9.4 9.4 24.6 9.4 33.9 0l296-296.2c9.4-9.5 9.4-24.7.1-34zm-324.3 106c6.2 6.3 16.4 6.3 22.6 0l208-208.2c6.2-6.3 6.2-16.4 0-22.6L366.1 4.7c-6.2-6.3-16.4-6.3-22.6 0L192 156.2l-55.4-55.5c-6.2-6.3-16.4-6.3-22.6 0L68.7 146c-6.2 6.3-6.2 16.4 0 22.6l112 112.2z">
+                                            </path>
+                                        </svg>
+
+                                    </div>
+                                    <div class="text-wraper  p-4">
+                                        <h5>But I must explain to you how all this mistaken idea of
+                                            denouncing pleasure and praising pain was born and I will give you a
+                                            complete
+                                            account of the system, and expound the actual teachings of the great
+                                            explorer of
+                                            the
+                                            truth, the master-builder of human happiness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="d-inline-flex mb-3 border border-info">
+                                    <div class="svg-t-wraper p-3">
+                                        <h1>B</h1>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="check-double" class="svg-inline--fa fa-check-double fa-w-16"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M505 174.8l-39.6-39.6c-9.4-9.4-24.6-9.4-33.9 0L192 374.7 80.6 263.2c-9.4-9.4-24.6-9.4-33.9 0L7 302.9c-9.4 9.4-9.4 24.6 0 34L175 505c9.4 9.4 24.6 9.4 33.9 0l296-296.2c9.4-9.5 9.4-24.7.1-34zm-324.3 106c6.2 6.3 16.4 6.3 22.6 0l208-208.2c6.2-6.3 6.2-16.4 0-22.6L366.1 4.7c-6.2-6.3-16.4-6.3-22.6 0L192 156.2l-55.4-55.5c-6.2-6.3-16.4-6.3-22.6 0L68.7 146c-6.2 6.3-6.2 16.4 0 22.6l112 112.2z">
+                                            </path>
+                                        </svg>
+
+                                    </div>
+                                    <div class="text-wraper  p-4">
+                                        <h5>But I must explain to you how all this mistaken idea of
+                                            denouncing pleasure and praising pain was born and I will give you a
+                                            complete
+                                            account of the system, and expound the actual teachings of the great
+                                            explorer of
+                                            the
+                                            truth, the master-builder of human happiness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="d-inline-flex mb-3 border border-danger">
+                                    <div class="svg-t-wraper p-3">
+                                        <h1>C</h1>
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="check-double" class="svg-inline--fa fa-check-double fa-w-16"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M505 174.8l-39.6-39.6c-9.4-9.4-24.6-9.4-33.9 0L192 374.7 80.6 263.2c-9.4-9.4-24.6-9.4-33.9 0L7 302.9c-9.4 9.4-9.4 24.6 0 34L175 505c9.4 9.4 24.6 9.4 33.9 0l296-296.2c9.4-9.5 9.4-24.7.1-34zm-324.3 106c6.2 6.3 16.4 6.3 22.6 0l208-208.2c6.2-6.3 6.2-16.4 0-22.6L366.1 4.7c-6.2-6.3-16.4-6.3-22.6 0L192 156.2l-55.4-55.5c-6.2-6.3-16.4-6.3-22.6 0L68.7 146c-6.2 6.3-6.2 16.4 0 22.6l112 112.2z">
+                                            </path>
+                                        </svg>
+                                        <path fill="currentColor"
+                                            d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z">
+                                        </path>
+                                        </svg>
+
+                                    </div>
+                                    <div class="text-wraper  p-4">
+                                        <h5>But I must explain to you how all this mistaken idea of
+                                            denouncing pleasure and praising pain was born and I will give you a
+                                            complete
+                                            account of the system, and expound the actual teachings of the great
+                                            explorer of
+                                            the
+                                            truth, the master-builder of human happiness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+    <script src="js/icc-ranking-page.js"></script>
+</body>
+
+</html>
