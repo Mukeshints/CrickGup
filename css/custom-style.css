@@ -13,7 +13,7 @@
 }
 sectin,article{width: 100%; display: block;}
 /*========|Menu Css Start|===========*/
-#navigation>nav[role="full-horizontal"] {
+/* #navigation>nav[role="full-horizontal"] {
     width: 100%;
 }
 
@@ -66,7 +66,7 @@ sectin,article{width: 100%; display: block;}
     text-decoration: none;
     font-size: 1em;
     transition: color .3s ease-in-out;
-}
+} */
 
 /*========|Menu Css End|===========*/
 .modal-body svg {

@@ -9,23 +9,52 @@
     <link rel="stylesheet" href="css/popup.css" />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="stylesheet" href="css/custom-style.css" />
+    <link rel="stylesheet" href="css/menu-animation.min.css" />
 </head>
-
 <body>
     <header class="header-top">
         <div class="container">
             <div class="row">
-                 <div class="col-lg-2 col-md-2 col-sm-2" id="logo"><a href="index.html"><img src="image/CG_LOGO.svg"></a>
+                <div class="col-lg-2 col-md-2 col-sm-2" id="logo"><a href="index.html"><img src="image/CG_LOGO.svg"></a>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10" id="navigation">
-                    <nav role="full-horizontal">
+                    <nav role="full-horizontal" class="mainmenu">
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="fans.html">Fan</a></li>
                             <li><a href="icc-ranking.html">ICC</a></li>
                         </ul>
                     </nav>
+                    <div id="mobileNav" class="position-absolute right-0">
+                        <input type="checkbox" id="top-nav" />
+                        <span class="hamburgerspan"></span>
+                        <span class="hamburgerspan"></span>
+                        <span class="hamburgerspan"></span>
+                        <div id="menu-cont-1">
+                            <div style="background:#193a89">
+                                <a href="index.html">
+                                    <img src="image/CG_LOGO.svg" alt="cricgup" style="height: 45px; margin:7px;" />
+                                </a></div>
+                            <ul class="menu-ul bg-white">
+                                <li class="nav-item"><a href="#">Home</a></li>
+                                <li class="nav-item sub-menu"><a href="fans.html">Fan</a>
+                                    <input type="checkbox" id="menu-1" />
+                                    <div id="menu-cont-2">
+                                        <ul class="menu-ul">
+                                            <label class="menu-label" for="menu-1">ICC</label>
+                                            <li class="nav-item"><a href="#">ICC</a></li>
+                                            <li class="nav-item"><a href="#">ICC</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a href="icc-ranking.html">ICC</a></li>
+                                <li class="nav-item"><a href="icc-ranking.html">Contact</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </header>
@@ -215,7 +244,7 @@
                                     </div>
                                     <p id="demo" class="time-stamp"></p>
                                     <script>
-                                        // Set the date we're counting down to var countDownDate=new Date("Jan 5, 2022 15:37:25").getTime(); // Update the count down every 1 second var x=setInterval(function (){ // Get today's date and time var now=new Date().getTime(); // Find the distance between now and the count down date var distance=countDownDate - now; // Time calculations for days, hours, minutes and seconds var days=Math.floor(distance / (1000 * 60 * 60 * 24)); var hours=Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var minutes=Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); var seconds=Math.floor((distance % (1000 * 60)) / 1000); // Display the result in the element with id="demo" document.getElementById("demo").innerHTML="Time Left:" + days + "d " + hours + "h " + minutes + "m " + seconds + "s "; // If the count down is finished, write some text if (distance < 0){ clearInterval(x); document.getElementById("demo").innerHTML="EXPIRED";}}, 1000); 
+                                        // Set the date we're counting down to var countDownDate=new Date("Jan 5, 2022 15:37:25").getTime(); // Update the count down every 1 second var x=setInterval(function (){ // Get today's date and time var now=new Date().getTime(); // Find the distance between now and the count down date var distance=countDownDate - now; // Time calculations for days, hours, minutes and seconds var days=Math.floor(distance / (1000 * 60 * 60 * 24)); var hours=Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var minutes=Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); var seconds=Math.floor((distance % (1000 * 60)) / 1000); // Display the result in the element with id="demo" document.getElementById("demo").innerHTML="Time Left:" + days + "d " + hours + "h " + minutes + "m " + seconds + "s "; // If the count down is finished, write some text if (distance < 0){ clearInterval(x); document.getElementById("demo").innerHTML="EXPIRED";}}, 1000);
                                     </script>
                                 </div>
                             </div>

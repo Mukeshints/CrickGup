@@ -7,6 +7,7 @@
     <link href="css/style.min.css" rel="stylesheet" />
     <link href="css/custom-style.css" rel="stylesheet" />
     <link href="css/fan-page.css" rel="stylesheet" />
+     <link rel="stylesheet" href="css/menu-animation.min.css" />
 </head>
 
 <body>
@@ -18,13 +19,41 @@
                         <img src="image/CG_LOGO.svg"></a>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10" id="navigation">
-                    <nav role="full-horizontal">
+                     <nav role="full-horizontal" class="mainmenu">
                         <ul>
                             <li><a href="index.html">Home</a></li>
                             <li><a href="fans.html">Fan</a></li>
                             <li><a href="icc-ranking.html">ICC</a></li>
                         </ul>
                     </nav>
+                    <div id="mobileNav" class="position-absolute right-0">
+                        <input type="checkbox" id="top-nav" />
+                        <span class="hamburgerspan"></span>
+                        <span class="hamburgerspan"></span>
+                        <span class="hamburgerspan"></span>
+                        <div id="menu-cont-1">
+                            <div style="background:#193a89">
+                                <a href="index.html">
+                                    <img src="image/CG_LOGO.svg" alt="cricgup" style="height: 45px; margin:7px;" />
+                                </a></div>
+                            <ul class="menu-ul bg-white">
+                                <li class="nav-item"><a href="#">Home</a></li>
+                                <li class="nav-item sub-menu"><a href="fans.html">Fan</a>
+                                    <input type="checkbox" id="menu-1" />
+                                    <div id="menu-cont-2">
+                                        <ul class="menu-ul">
+                                            <label class="menu-label" for="menu-1">ICC</label>
+                                            <li class="nav-item"><a href="#">ICC</a></li>
+                                            <li class="nav-item"><a href="#">ICC</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a href="icc-ranking.html">ICC</a></li>
+                                <li class="nav-item"><a href="icc-ranking.html">Contact</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
