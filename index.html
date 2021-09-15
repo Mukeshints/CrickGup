@@ -2,509 +2,446 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CricGup</title>
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/custom-style.css" />
-    <link rel="stylesheet" href="css/menu-animation.min.css" />
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .f-ancher a {
+            font-size: 1.1em;
+            color: #011136;
+            transition: all 0.5s;
+        }
+        
+        .f-ancher a:hover {
+            color: #c13b3c;
+            text-decoration: none;
+        }
+        
+        .f-ancher a:hover .fa {
+            color: #042c8c;
+        }
+        
+        .f-ancher a .fa {
+            color: #c13b3c;
+        }
+        
+        .must-read-wraper .card {
+            width: 250px;
+        }
+        
+        .must-read-wraper .top-sub-title {
+            top: -7px;
+            left: 4%;
+            color: #c13b3c;
+            font-size: 0.8em;
+            z-index: 12;
+            width: 90%;
+          
+        }
+        /* Slider css start */
+        
+        .swiper-slide {
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        
+        .swiper-slide h4 {
+            font-size: 16px;
+        }
+        
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-prev {
+            right: -30px;
+            left: auto;
+        }
+        
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            left: -30px;
+            right: auto;
+        }
+        
+        .mySwiper .swiper-button-next,
+        .mySwiper .swiper-button-prev {
+            width: calc(var(--swiper-navigation-size)/10 * 5);
+        }
+        
+        .swiper-pagination-bullet {
+            margin-right: 10px;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 1.5em;
+        }
+        /* Slider css end */
+        /* trending player section css */
+        
+        .tp-wraper img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .tp-wraper h4 {
+            line-height: 1.7em;
+        }
+        
+        .tp-wraper h4 a {
+            color: #011136;
+        }
+        /* css for fixed icon top 10 news */
+        
+        .top-news-icon {
+            width: 50px;
+            min-height: 50px;
+            right: 0;
+            top: 50%;
+        }
+        
+        .top-news-icon:hover {
+            background-color: #042c8c!important;
+        }
+        
+        @media screen and (max-width: 767px) {
+            #news-mobile .t-s-t .w-80 img {
+                top: 15% !important;
+            }
+            .f-ancher a {
+                font-size: 0.8em;
+            }
+            .f-ancher .row {
+                display: inline-flex;
+                flex-direction: row;
+            }
+            .footer-icon {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            .footer-icon .fa {
+                font-size: 1em!important;
+            }
+            .swiper-button-prev,
+            swiper-container-rtl .swiper-button-next {
+                left: -14px!important;
+            }
+            .swiper-button-next,
+            .swiper-container-rtl .swiper-button-prev {
+                right: -14px!important;
+            }
+            .tp-wraper img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- menu -->
     <header class="header-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2" id="logo"><a href="index.html"><img src="image/CG_LOGO.svg"></a>
+                <div class="col-lg-2 col-md-2 col-sm-2" id="logo">
+                    <a href="index.html"><img src="image/CG_LOGO.svg" /></a>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10" id="navigation">
                     <nav class="navbar navbar-expand-lg navbar-light">
-
-                        <button class="bg-white navbar-toggler text-white position-absolute" type="button" data-toggle="collapse"
-                            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <button class="bg-white navbar-toggler text-white position-absolute" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav text-uppercase">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="fans.html">Fans</a>
+                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="fans.html">Fans</a>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                       ICC
-                                    </a>
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ICC
+                    </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="icc-ranking.html">ICC Team Ranking</a>
-                                        <a class="dropdown-item" href="player-ranking.html">ICC Player Ranking</a>
-
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+                                        <a class="dropdown-item" href="icc-ranking.html">ICC Team Ranking</a
+                      >
+                      <a class="dropdown-item" href="player-ranking.html"
+                        >ICC Player Ranking</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
+      </div>
     </header>
-    <section class="body-part">
-        <div class="container" style="min-height: 55vh;">
+    <!-- Must Read -->
+    <section class="must-read">
+      <div class="container">
+        <h4 class="m-0 my-2 main-title mt-2">Must <span>Read</span></h4>      
+ 
+        <div class="swiper-container mySwiper must-read-wraper overflow-hidden">
+          <div class="swiper-wrapper w-100">
+            <div class="swiper-slide">
+              <div class="width-200 position-relative mt-3">
+                <h6
+                  class="
+                    position-absolute
+                    top-sub-title
+                    bg-white
+                    px-2
+                    text-uppercase
+                    font-weight-bold
+                  "
+                >
+               I had doubts I would ever play
+                </h6>
+                <div class="w-100 shadow-sm p-3 border rounded">
+                  <p class="mb-0 mt-2"> Ollie Robinson played only two T20s for Sussex since his suspension from ...</p>
+              
+                </div>
+              </div>
+            </div>
+              <div class="swiper-slide">
+              <div class="width-200 position-relative mt-3">
+                <h6
+                  class="
+                    position-absolute
+                    top-sub-title
+                    bg-white
+                    px-2
+                    text-uppercase
+                    font-weight-bold
+                  "
+                >
+                Mindset adjustments: Bumrah
+                </h6>
+                <div class="w-100 shadow-sm p-3 border rounded flex-fill">
+                  <p class="mb-0 mt-2">  After a wicketless outing in the WTC final, Jasprit Bumrah returned ...</p>
+              
+                </div>
+              </div>
+            </div>
+               <div class="swiper-slide">
+              <div class="width-200 position-relative mt-3">
+                <h6
+                  class="
+                    position-absolute
+                    top-sub-title
+                    bg-white
+                    px-2
+                    text-uppercase
+                    font-weight-bold
+                  "
+                >
+                India vs England 1st Test Day 4
+                </h6>
+                <div class="w-100 shadow-sm p-3 border rounded flex-fill">
+                  <p class="mb-0 mt-2">  India vs England (IND vs ENG) 1st Test Day 4 Live Cricket Score Streaming Online Updates: India </p>
+              
+                </div>
+              </div>
+            </div>
+               <div class="swiper-slide">
+              <div class="width-200 position-relative mt-3">
+                <h6
+                  class="
+                    position-absolute
+                    top-sub-title
+                    bg-white
+                    px-2
+                    text-uppercase
+                    font-weight-bold
+                  "
+                >
+                Jadeja shines tail wags as India
+                </h6>
+                <div class="w-100 shadow-sm p-3 border rounded">
+                  <p class="mb-0 mt-2"> Irrespective of conditions, Jadeja is un-droppable in this team. The left-hander had ...</p>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    
+        </div>
+         <div class="position-relative w-100 mt-n5">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+      </div>
+    
+    </section>
+    <!-- Top News -->
+    <section class="mt-5 pt-2">
+      <div class="container">
+        <h4 class="m-0 my-2 main-title mt-2">Top <span>News</span></h4>        
+         <section id="news-mobile" class="d-block">
             <div class="row">
-                <div class="col-lg-9 col-md-9 bg-white pb-2 pt-2">
-                    <section id="news-desktop">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 news-card">
-                                <div class="card mb-4 mt-4 position-relative">
-                                    <h6 class="news-date">May 04, 2021</h6><a href="#"><img class="card-img-top"
-                                            src="//placeimg.com/290/180/any" alt="CricGup" /></a>
-                                    <div class="card-body pt-2">
-                                        <h5 class="card-title"><span>Devil Who Once Was God.</span></h5>
-                                        <p class="card-text "><a href="#">American and Nordic Mythology have a
-                                                character,
-                                                known as Loki, the step brother of the God of thunder Thor and son of
-                                                Odin.
-                                                By that virtue he was a God but he chose a path other than that and
-                                                became
-                                                the devil we know, Marvel’s Avengers or Thor series watchers might know
-                                                the
-                                                story but a bit different line than the original plot</a></p><a href="#"
-                                            class="btn btn-warning btn-sm">Read More</a>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="article-wraper rounded w-100 shadow-sm float-left border mt-1 mb-2">
+                                <div class="w-100 p-2">
+                                    <h6 class="pt-2"><span>4th T20I: Dan Christian</span></h6>
+                                    <p class="d-flex pl-2 mb-0">
+                                        <a href="#" class="text-dark">
+Australia beat Bangladesh by three wickets to claim a consolation win in the five-match T20I series.
+                    </a>
+                                        <img src="image/cricket-b-1.jpg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
+                                        </p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 news-card">
-                                <div class="card mb-4 mt-4 position-relative">
-                                    <h5 class="news-date">May 04, 2021</h5><a href="#"><img class="card-img-top"
-                                            src="//placeimg.com/290/180/any" alt="CricGup" /></a>
-                                    <div class="card-body pt-2">
-                                        <h6 class="card-title"><span>Devil Who Once Was God.</span></h6>
-                                        <p class="card-text "><a href="#">American and Nordic Mythology have a
-                                                character,
-                                                known as Loki, the step brother of the God of thunder Thor and son of
-                                                Odin.
-                                                By that virtue he was a God but he chose a path other than that and
-                                                became
-                                                the devil we know, Marvel’s Avengers or Thor series watchers might know
-                                                the
-                                                story but a bit different line than the original plot</a></p><a href="#"
-                                            class="btn btn-warning btn-sm">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 news-card">
-                                <div class="card mb-4 mt-4 position-relative">
-                                    <h6 class="news-date">May 04, 2021</h6><a href="#"><img class="card-img-top"
-                                            src="//placeimg.com/290/180/any" alt="CricGup" /></a>
-                                    <div class="card-body pt-2">
-                                        <h6 class="card-title"><span>Devil Who Once Was God.</span></h6>
-                                        <p class="card-text "><a href="#">American and Nordic Mythology have a
-                                                character,
-                                                known as Loki, the step brother of the God of thunder Thor and son of
-                                                Odin.
-                                                By that virtue he was a God but he chose a path other than that and
-                                                became
-                                                the devil we know, Marvel’s Avengers or Thor series watchers might know
-                                                the
-                                                story but a bit different line than the original plot</a></p><a href="#"
-                                            class="btn btn-warning btn-sm">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 news-card">
-                                <div class="card mb-4 mt-4 position-relative">
-                                    <h6 class="news-date">May 04, 2021</h6><a href="#"><img class="card-img-top"
-                                            src="//placeimg.com/290/180/any" alt="CricGup" /></a>
-                                    <div class="card-body pt-2">
-                                        <h6 class="card-title"><span>Devil Who Once Was God.</span></h6>
-                                        <p class="card-text "><a href="#">American and Nordic Mythology have a
-                                                character,
-                                                known as Loki, the step brother of the God of thunder Thor and son of
-                                                Odin.
-                                                By that virtue he was a God but he chose a path other than that and
-                                                became
-                                                the devil we know, Marvel’s Avengers or Thor series watchers might know
-                                                the
-                                                story but a bit different line than the original plot</a></p><a href="#"
-                                            class="btn btn-warning btn-sm">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="news-mobile">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-left">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #1</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-right">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #2</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-left">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #3</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-right">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #4</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-left">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #5</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-right">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #6</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-left">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #7</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                                <div class="article-wraper border shadow mt-1 mb-1 t-s-t" data-aos="fade-right">
-                                    <div class="w-80 p-2">
-                                        <h6><span>Title #8</span></h6>
-                                        <p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                                consectetuer adipiscing elit. </a></p><img src="image/3.jpg"
-                                            class="thumbnail" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
-                <div class="col-lg-3 col-md-3"></div>
-            </div>
-            <div class="main">
-                <div class="sidebar">
-                    <div style="position: relative; z-index: 1;">
-                        <div id="advertisement" class="advertisement hide">
-                            <div class="panel bg-img">
-                                <div class="panel-heading">
-                                    <div class="col-md-12"><img src="image/CG_LOGO.svg" alt="cricgup"
-                                            class="img-ad-1" />
-                                        <h6 class="ad-heading">BIGGEST GIVEAWAY <br />FOR OUR SUBSCRIBERS <svg
-                                                aria-hidden="true" focusable="false" data-prefix="fas"
-                                                data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16"
-                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                <path fill="currentColor"
-                                                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
-                                                </path>
-                                            </svg></h6>
-                                    </div>
-                                    <p id="demo" class="time-stamp"></p>
-                                    <script>
-                                        // Set the date we're counting down to var countDownDate=new Date("Jan 5, 2022 15:37:25").getTime(); // Update the count down every 1 second var x=setInterval(function (){ // Get today's date and time var now=new Date().getTime(); // Find the distance between now and the count down date var distance=countDownDate - now; // Time calculations for days, hours, minutes and seconds var days=Math.floor(distance / (1000 * 60 * 60 * 24)); var hours=Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var minutes=Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); var seconds=Math.floor((distance % (1000 * 60)) / 1000); // Display the result in the element with id="demo" document.getElementById("demo").innerHTML="Time Left:" + days + "d " + hours + "h " + minutes + "m " + seconds + "s "; // If the count down is finished, write some text if (distance < 0){ clearInterval(x); document.getElementById("demo").innerHTML="EXPIRED";}}, 1000);
-                                    </script>
-                                </div>
-                            </div>
-                            <div class="panel-body bg-white">
-                                <div id="caro" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="item-half-1"><a href="landing.html"
-                                                    class="animated bounceInDown text delay-1s"><img src="image/3.jpg"
-                                                        alt="CricGup" /></a></div>
-                                            <div class="item-half-2 carousel-caption">
-                                                <div class="carousel-caption">
-                                                    <h5 class="animated bounceInUp delay-2s"><a href="landing.html"
-                                                            class="text">#1 Caption Text</a></h5>
-                                                    <p class="animated bounceInRight delay-5s"><a href="landing.html"
-                                                            class="text">Cum sociis natoque penatibus et magnis dis
-                                                            parturient montes, nascetur ridiculus mus</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="item-half-1"><a href="landing.html"
-                                                    class="text animated bounceInUp delay-1s"><img src="image/3.jpg"
-                                                        alt="CricGup" /></a></div>
-                                            <div class="item-half-2">
-                                                <div class="carousel-caption">
-                                                    <h5 class="animated bounceInDown delay-2s"><a href="landing.html"
-                                                            class="text">#2 Caption Text</a></h5>
-                                                    <p class="animated bounceInLeft delay-3s"><a href="landing.html"
-                                                            class="text">Cum sociis natoque penatibus et magnis dis
-                                                            parturient montes, nascetur ridiculus mus</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="item-half-1"><a href="landing.html"
-                                                    class="text animated bounceInDown delay-1s"><img src="image/3.jpg"
-                                                        alt="CricGup" /></a></div>
-                                            <div class="item-half-2">
-                                                <div class="carousel-caption">
-                                                    <h5 class="animated bounceInDown delay-2s"><a href="landing.html"
-                                                            class="text animated bounceInUp">#3 Caption Text</a></h5>
-                                                    <p class="animated bounceInLeft delay-3s"><a href="landing.html"
-                                                            class="text">Cum sociis natoque penatibus et magnis dis
-                                                            parturient montes, nascetur ridiculus mus</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel-footer bg-white">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xl-6 text-center "><button data-toggle="modal"
-                                            data-target="#exampleModal" class="btn btn-block btn-default"
-                                            style="border-radius: 0px; line-height: 2rem;">I Don't Want Money</button>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xl-6 text-center order-xl-12 p-0"><a
-                                            href="give-away.html" class="btn btn-block btn-warning button"
-                                            style="border-radius: 0px"><strong>SUBSCRIBE & WIN</strong></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="advertisement-mobile" class="advertisement-mobile">
-                        <div class="panel bg-img">
-                            <div class="panel-heading" onclick="openForm()">
-                                <div class="row">
-                                    <div class="col-md-12"><img src="image/CG_LOGO.svg" alt="cricgup"
-                                            class="img-ad-1" />
-                                        <h5 class="ad-heading">BIGGEST GIVEAWAY <br />FOR OUR SUBSCRIBERS <svg
-                                                class="email" aria-hidden="true" focusable="false" data-prefix="fas"
-                                                data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16"
-                                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                <path fill="currentColor"
-                                                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
-                                                </path>
-                                            </svg></h5>
-                                    </div>
-                                </div>
-                                <p id="demom" class="time-stamp"></p>
-                            </div>
-                            <div id="expandwrap">
-                                <div class="panel-body bg-white">
-                                    <div id="caro-mobile" class="carousel slide caption-animate" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="item-half-1"><a href="landing.html"
-                                                        class="animated bounceInDown text delay-1s"><img
-                                                            src="image/3.jpg" alt="CricGup" /></a></div>
-                                                <div class="item-half-2 carousel-caption">
-                                                    <div class="carousel-caption">
-                                                        <h5 class="animated bounceInUp delay-3s"><a href="landing.html"
-                                                                class="text">#1 Caption Text</a></h5>
-                                                        <p class="animated bounceInRight delay-4s"><a
-                                                                href="landing.html" class="text">Cum sociis natoque
-                                                                penatibus et magnis dis parturient montes, nascetur
-                                                                ridiculus mus</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="item-half-1"><a href="landing.html"
-                                                        class="text animated bounceInUp delay-1s"><img src="image/3.jpg"
-                                                            alt="CricGup" /></a></div>
-                                                <div class="item-half-2">
-                                                    <div class="carousel-caption">
-                                                        <h5 class="animated bounceInDown delay-2s"><a
-                                                                href="landing.html" class="text">#2 Caption Text</a>
-                                                        </h5>
-                                                        <p class="animated bounceInLeft delay-3s"><a href="landing.html"
-                                                                class="text">Cum sociis natoque penatibus et magnis dis
-                                                                parturient montes, nascetur ridiculus mus</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="item-half-1"><a href="landing.html"
-                                                        class="text animated bounceInDown delay-1s"><img
-                                                            src="image/3.jpg" alt="CricGup" /></a></div>
-                                                <div class="item-half-2">
-                                                    <div class="carousel-caption">
-                                                        <h5 class="animated bounceInDown delay-2s"><a
-                                                                href="landing.html" class="text animated bounceInUp">#3
-                                                                Caption Text</a></h5>
-                                                        <p class="animated bounceInLeft delay-3s"><a href="landing.html"
-                                                                class="text">Cum sociis natoque penatibus et magnis dis
-                                                                parturient montes, nascetur ridiculus mus</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-footer bg-white">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-sm-6 col-xl-6 text-center "><button data-toggle="modal"
-                                                data-target="#exampleModal" class="btn btn-block btn-default"
-                                                style="border-radius: 0px; line-height: 2rem;">I Don't Want
-                                                Money</button></div>
-                                        <div class="col-lg-8 col-sm-6 col-xl-6 order-xl-12 p-0"><a href="give-away.html"
-                                                class="btn btn-block btn-warning button"
-                                                style="border-radius: 0px; width: 94%;"><strong>SUBSCRIBE &
-                                                    WIN</strong></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header text-center bg-dark"><img src="image/logo-1.png" alt="cricgup"
-                                        class="img-ad-1" style="float: none;" /><button type="button" class="close"
-                                        data-dismiss="modal" aria-label="Close"><span
-                                            aria-hidden="true">&times;</span></button></div>
-                                <div class="modal-body text-center"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="fas" data-icon="wallet" class="svg-inline--fa fa-wallet fa-w-16"
-                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                        <path fill="currentColor"
-                                            d="M461.2 128H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h384c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h397.2c28.02 0 50.8-21.53 50.8-48V176c0-26.47-22.78-48-50.8-48zM416 336c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z">
-                                        </path>
-                                    </svg>
-                                    <p class="text-center" style="font-size: large; position: relative; padding: 15px;">
-                                        <strong class="text-success">Congratulations !</strong><br />Thank you for
-                                        holding money on your pocket sincerely.<br />
-                                    </p><button type="button" class="btn btn-primary">Thank You</button>
-                                </div>
-                            </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="article-wraper rounded w-100 shadow-sm float-left border mt-1 mb-2">
+                        <div class="w-100 p-2">
+                            <h6 class="pt-2"><span>England vs India, 1st Test Day 4</span></h6>
+                            <p class="d-flex pl-2 mb-0">
+                                <a href="#" class="text-dark">
+England vs India, 1st Test Day 4: Joe Root's delightful 109 helped England to 303 in the second innings.
+                    </a>
+                                <img src="image/icc/indiavsengland.jpeg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="footer-wraper" style="z-index: 10">
-        <section class="footer" style="margin: 0px;">
-            <div class="container">
-                <div class="row footer-list-menu">
-                    <div class="col-lg-3 col-md-3 col-sm-6">
-                        <h3>Quicklinks</h3>
-                        <ul>
-                            <li><a href="#">TV Listening</a></li>
-                            <li><a href="#">Scores</a></li>
-                            <li><a href="#">Odds</a></li>
-                            <li><a href="#">By Now</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6">
-                        <h3>Players</h3>
-                        <ul>
-                            <li><a href="#">TV Listening</a></li>
-                            <li><a href="#">Scores</a></li>
-                            <li><a href="#">Odds</a></li>
-                            <li><a href="#">By Now</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6">
-                        <h3>Series</h3>
-                        <ul>
-                            <li><a href="#">TV Listening</a></li>
-                            <li><a href="#">Scores</a></li>
-                            <li><a href="#">Odds</a></li>
-                            <li><a href="#">By Now</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6">
-                        <h3>Contact Us</h3>
-                        <ul>
-                            <li><a href="#">TV Listening</a></li>
-                            <li><a href="#">Scores</a></li>
-                            <li><a href="#">Odds</a></li>
-                            <li><a href="#">By Now</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="social-ast row">
-                    <div class="col-lg-6 st-col-md-6 st-col-sm-6"></div>
-                    <div class="col-lg-6 st-col-md-6 st-col-sm-6">
-                        <p style="text-align: right; font-size: 35px; margin: 0px">Follow CG on <a href="#"
-                                class="facebook"><svg class="svg-icon" aria-hidden="true" focusable="false"
-                                    data-prefix="fab" data-icon="facebook-square"
-                                    class="svg-inline--fa fa-facebook-square fa-w-14" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor"
-                                        d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
-                                    </path>
-                                </svg></a><a href="#" class="twitter"><svg class="svg-icon" aria-hidden="true"
-                                    focusable="false" data-prefix="fab" data-icon="twitter-square"
-                                    class="svg-inline--fa fa-twitter-square fa-w-14" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor"
-                                        d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
-                                    </path>
-                                </svg></a><a href="#" class="youtube"><svg class="svg-icon" aria-hidden="true"
-                                    focusable="false" data-prefix="fab" data-icon="youtube-square"
-                                    class="svg-inline--fa fa-youtube-square fa-w-14" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor"
-                                        d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z">
-                                    </path>
-                                </svg></a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="footer-bottom">
-            <p>© CopyRight CricGup </p>
-        </footer>
-    </section>
-    <!-- <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-    <script src="js/home-page.js"></script>
 
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="article-wraper rounded w-100 shadow-sm float-left border mt-1 mb-2">
+                        <div class="w-100 p-2">
+                            <h6 class="pt-2"><span>IPL 2021: No Quarantine For Overseas Players</span></h6>
+                            <p class="d-flex pl-2 mb-0">
+                                <a href="#" class="text-dark">8IPL 2021: Overseas players playing in the Indian Premier League will not be required to quarantine  </a>
+                                <img src="image/neeraj-cchopra.jpg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="article-wraper rounded w-100 shadow-sm float-left border mt-1 mb-2">
+                        <div class="w-100 p-2">
+                            <h6 class="pt-2"><span>Completely Fine Now</span></h6>
+                            <p class="d-flex pl-2 mb-0">
+                                <a href="#" class="text-dark">Krunal Pandya took to Instagram to inform fans that he has recovered from COVID-19. He also thanked.
+                    </a>
+                                <img src="image/krunal.jpeg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </section>
+        </div>
+        </section>
+        <!-- Trending Player -->
+        <section class="pb-2">
+            <div class="container pt-1 tp-wraper mb-5 pb-lg-3 pb-sm-0">
+                <h4 class="m-0 my-0 main-title">Trending <span>Player</span></h4>
+
+                <div class="swiper-container mySwiperfooter">
+                    <div class="swiper-wrapper w-100 pt-3">
+                        <div class="swiper-slide">
+                            <h4 class="text-center">
+                                <a href="#">
+                                    <img src="image/virat-kohli.jpg" class="rounded-circle border" />
+                                    <br /> Virat Kohli
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4 class="text-center">
+                                <a href="#">
+                                    <img src="image/rohit.jpeg" class="rounded-circle border" />
+                                    <br /> Rohit Sharma
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4 class="text-center">
+                                <a href="#">
+                                    <img src="image/klrahul.jpeg" class="rounded-circle border" />
+                                    <br /> K. L. Rahul
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4 class="text-center">
+                                <a href="#">
+                                    <img src="image/bumrah.jpeg" class="rounded-circle border" />
+                                    <br /> Bumrah
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4 class="text-center">
+                                <a href="#">
+                                    <img src="image/bhuvi.jpeg" class="rounded-circle border" />
+                                    <br /> Bhuwneshwar Kumar
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="w-100 text-center py-lg-2 mb-1">
+                        <div class="swiper-pagination position-static"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Fixed bottom footer -->
+        <footer class="fixed-bottom border-top footer-icon" style="background-color:#d8d5d5">
+            <div class="container py-lg-2 py-sm-1 f-ancher pb-sm-0">
+                <div class="d-flex justify-content-between align-items-center text-center">
+                    <a href="#">
+                        <i class="fa fa-file fa-2x" aria-hidden="true"></i><br /> Memoa
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-question-circle fa-2x" aria-hidden="true"></i><br /> Quiz
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-list-alt fa-2x" aria-hidden="true"></i><br /> Article
+                    </a>
+
+                    <a href="#">
+                        <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i><br /> Give Away
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- Fixed top 10 news icon -->
+        <div class="text-center bg-dark top-news-icon position-fixed align-items-center justify-content-center d-flex rounded p-1"><a href="#" class="text-white" style="line-height: 15px;"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+    <br/><small >Top 10 News</small></a></div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/swiper-slider-initializer.js"></script>
 </body>
 
 </html>
