@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fans</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="css/custom-style.css" rel="stylesheet" />
 
     <style type="text/css">
@@ -14,7 +15,7 @@
             width: 100%;
             border-bottom: 4px solid #9c9c9c
         }
-        
+
         .f-profile-wraper img {
             height: 90px;
             width: 90px;
@@ -22,11 +23,11 @@
             margin-top: -47px;
             z-index: 1
         }
-        
+
         .f-profile-content h4 {
             color: var(--blue);
         }
-        
+
         .f-profile-content h4::before,
         .f-profile-content h4::after {
             content: "";
@@ -36,24 +37,24 @@
             background-color: #faa507;
             bottom: 10px
         }
-        
+
         .f-profile-content h4::before {
             left: 32%
         }
-        
+
         .f-profile-content h4::after {
             right: 32%
         }
-        
+
         .f-profile-content p {
             color: var(--black-2);
         }
-        
+
         .f-profile-content p span {
             color: var(--black);
             font-weight: 500
         }
-        
+
         .fan-footer {
             max-height: 20vh;
             background: #141414;
@@ -62,76 +63,77 @@
             border-top-left-radius: 50% 20%;
             border-top-right-radius: 50% 20%;
         }
-        
+
         .subscribe .btn {
             font-size: 2em;
             margin: 25px 0;
             background-color: transparent;
             border-color: #faa507
         }
-        
+
         .subscribe .btn:hover {
             background-color: #faa507
         }
-        
+
         .subscribe a svg {
             height: 45px;
             margin-right: 10px
         }
+
         /*====|RCB HISTORY CSS|=======*/
-        
+
         .rcb-history {
             background: #252835;
             color: #fff;
         }
-        
+
         .rcb-history ul {
             list-style: none;
         }
-        
+
         .rcb-history ul li a {
             line-height: 1.7em;
             color: #faa507;
             font-size: 1.3em;
             text-decoration: none;
         }
-        
+
         .rcb-history ul li a.current {
             border-bottom: 2px solid #fff;
         }
-        
+
         #navwraper section {
             height: 100vh;
             width: 480px;
         }
-        
+
         #navwraper section#section-1 {
             background-image: url(../image/banner.jpg);
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
+
         #navwraper section h3,
         #navwraper section article {
             background-color: rgba(255, 255, 255, 0.753);
             border: 1px solid #dddddd;
             border-radius: 15px;
         }
-        
+
         #navwraper section article h3 span {
             border-left: solid 5px #000 !important;
             background-color: #faa507;
             border: solid 1px #000;
             color: rgb(0, 14, 75);
         }
-        
+
         #navwraper main .btn {
             bottom: 23%;
             right: 5%;
             height: 55px;
             width: 55px;
         }
-        
+
         #navwraper main .btn::after {
             content: "";
             width: 0;
@@ -143,28 +145,34 @@
             top: 22px;
             border-top: 18px solid var(--yellow);
         }
-        
+
         @media screen and (max-width:767px) {
             .f-profile-content h4:before {
                 left: 23% !important
             }
+
             .f-profile-content h4::after {
                 right: 23% !important
             }
+
             .subscribe .btn {
                 font-size: 1em;
                 font-weight: bold
             }
+
             #navwraper section {
                 width: 100%;
             }
+
             .year-wraper {
                 overflow-x: scroll;
             }
+
             /* Hide scrollbar for Chrome, Safari and Opera */
             .year-wraper::-webkit-scrollbar {
                 display: none;
             }
+
             /* Hide scrollbar for IE, Edge and Firefox */
             .year-wraper {
                 -ms-overflow-style: none;
@@ -172,8 +180,9 @@
                 scrollbar-width: none;
                 /* Firefox */
             }
+
             .rcb-history.fixed-top {
-                top: 33px!important;
+                top: 33px !important;
             }
         }
     </style>
@@ -189,44 +198,45 @@
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10" id="navigation">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <button class="bg-white navbar-toggler text-white position-absolute" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                        <button class="bg-white navbar-toggler text-white position-absolute" type="button"
+                            data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav text-uppercase">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="fans.html">Fans</a>
+                                    <a class="nav-link" href="index.html">Home <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="fans.html">Fans</a>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      ICC
-                    </a>
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        ICC
+                                    </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="icc-ranking.html">ICC Team Ranking</a
-                      >
-                      <a class="dropdown-item" href="player-ranking.html"
-                        >ICC Player Ranking</a
-                      >
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
+                                        <a class="dropdown-item" href="icc-ranking.html">ICC Team Ranking</a>
+                                        <a class="dropdown-item" href="player-ranking.html">ICC Player Ranking</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
         </div>
-      </div>
     </header>
     <div class="fans-banner bg-light">
         <img src="image/cricketbanner2.jpg" class="img-border" />
         <article class="fan-article container">
             <div class="row">
                 <div class="col-lg-12">
-                 <div class="f-profile-wraper w-100 text-center"><img src="image/user-img.png" class="bg-white rounded-circle" alt="User Image" /></div>
+                    <div class="f-profile-wraper w-100 text-center"><img src="image/user-img.png"
+                            class="bg-white rounded-circle" alt="User Image" /></div>
                 </div>
                 <div class="col-lg-12 ">
                     <div class="f-profile-content text-center">
@@ -244,21 +254,21 @@
         </article>
     </div>
     <section class="container">
-           <h3 class="m-0 my-2 main-title mt-3">Top <span>Stories</span></h3> 
-        <div class="row pb-4">               
+        <h3 class="m-0 my-2 main-title mt-3">Top <span>Stories</span></h3>
+        <div class="row pb-4">
             <div class="row">
-                        <div class="col-lg-6 col-md-12">
-                            <div class="article-wraper rounded w-100 shadow-sm float-left border mt-1 mb-2">
-                                <div class="w-100 p-2">
-                                    <h6 class="pt-2"><span>Title #1</span></h6>
-                                    <p class="d-flex pl-2 mb-0">
-                                        <a href="#" class="text-dark">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      consectetuer adipiscing elit.
-                    </a>
-                                        <img src="image/3.jpg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
-                                        </p>
-                                    </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="article-wraper rounded w-100 shadow-sm float-left border mt-1 mb-2">
+                        <div class="w-100 p-2">
+                            <h6 class="pt-2"><span>Title #1</span></h6>
+                            <p class="d-flex pl-2 mb-0">
+                                <a href="#" class="text-dark">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    consectetuer adipiscing elit.
+                                </a>
+                                <img src="image/3.jpg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
+                            </p>
                         </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="article-wraper rounded w-100 shadow-sm float-left border mt-1 mb-2">
@@ -266,8 +276,8 @@
                             <h6 class="pt-2"><span>Title #1</span></h6>
                             <p class="d-flex pl-2 mb-0">
                                 <a href="#" class="text-dark">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      consectetuer adipiscing elit.
-                    </a>
+                                    consectetuer adipiscing elit.
+                                </a>
                                 <img src="image/3.jpg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
                             </p>
                         </div>
@@ -282,8 +292,8 @@
                             <h6 class="pt-2"><span>Title #1</span></h6>
                             <p class="d-flex pl-2 mb-0">
                                 <a href="#" class="text-dark">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      consectetuer adipiscing elit.
-                    </a>
+                                    consectetuer adipiscing elit.
+                                </a>
                                 <img src="image/3.jpg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
                             </p>
                         </div>
@@ -295,8 +305,8 @@
                             <h6 class="pt-2"><span>Title #1</span></h6>
                             <p class="d-flex pl-2 mb-0">
                                 <a href="#" class="text-dark">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      consectetuer adipiscing elit.
-                    </a>
+                                    consectetuer adipiscing elit.
+                                </a>
                                 <img src="image/3.jpg" class="rounded ml-1 mt-lg-n4 mt-sm-n2" style="height: 70px;" />
                             </p>
                         </div>
@@ -304,127 +314,148 @@
                 </div>
             </div>
         </div>
-        </section>
-        <section id="rcb-year">
-            <div class="rcb-history py-2" id="rcb-header">
-                <div class="container">
-                    <h4 class="text-white mb-0 py-2">RCB History</h4>
-                    <div class="year-wraper">
-                        <ul class="d-flex flex-wrap justify-content-between align-items-center m-0 p-0">
-                            <li><a href="#section-1" class="current px-3 mr-2" id="a1">2013</a></li>
-                            <li><a href="#section-2" class="px-3 mr-2" id="a2">2014</a></li>
-                            <li><a href="#section-3" class="px-3 mr-2" id="a3">2015</a></li>
-                            <li><a href="#section-4" class="px-3 mr-2" id="a4">2016</a></li>
-                            <li><a href="#section-5" class="px-3 mr-2" id="a5">2017</a></li>
-                            <li><a href="#section-6" class="px-3 mr-2" id="a6">2018</a></li>
-                            <li><a href="#section-7" class="px-3 mr-2" id="a7">2019</a></li>
-                            <li><a href="#section-8" class="px-3 mr-2" id="a8">2020</a></li>
-                            <li><a href="#section-9" class="px-3 mr-2" id="a9">2021</a></li>
-                        </ul>
-                    </div>
+    </section>
+    <section id="rcb-year">
+        <div class="rcb-history pt-2" id="rcb-header">
+            <div class="container">
+                <h4 class="text-white mb-0 py-2">RCB History</h4>
+                <div class="year-wraper">
+                    <ul class="d-flex justify-content-between align-items-center m-0 p-0 pb-1">
+                        <li><a href="#section-1" class="current px-3 mr-2" id="a1">2013</a></li>
+                        <li><a href="#section-2" class="px-3 mr-2" id="a2">2014</a></li>
+                        <li><a href="#section-3" class="px-3 mr-2" id="a3">2015</a></li>
+                        <li><a href="#section-4" class="px-3 mr-2" id="a4">2016</a></li>
+                        <li><a href="#section-5" class="px-3 mr-2" id="a5">2017</a></li>
+                        <li><a href="#section-6" class="px-3 mr-2" id="a6">2018</a></li>
+                        <li><a href="#section-7" class="px-3 mr-2" id="a7">2019</a></li>
+                        <li><a href="#section-8" class="px-3 mr-2" id="a8">2020</a></li>
+                        <li><a href="#section-9" class="px-3 mr-2" id="a9">2021</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <section id="main">
-            <div class="container" id="navwraper">
-               
-                    <!-- <div class="position-relative" id="downarrow">
+        </div>
+    </section>
+    <section id="main">
+        <div class="container" id="navwraper">
+            <!-- <div class="position-relative" id="downarrow">
                         <a class="btn btn-dark position-fixed bg-dark text-dark rounded-circle border-light" id="jumptosection"></a>
                     </div> -->
-                    <section id="section-1" class="m-auto d-flex flex-column justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2013</h3>
-                        <article class="p-3 mt-3 text-dark">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, blanditiis expedita? Earum eligendi pariatur quaerat quos expedita ab quibusdam ratione veniam in, mollitia fuga repudiandae?
-                            </p>
-                        </article>
-                    </section>
-                    <section id="section-2" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2014</h3>
-                        <article class="p-3 mt-3 text-dark">
-                            <!-- <h3><span class="px-2">2014</span></h3> -->
-                            <p>Ratione nulla nam, ipsa dignissimos corrupti veniam nostrum, laudantium asperiores sequi numquam placeat velit voluptate in praesentium non labore unde incidunt laborum maxime quae magni.</p>
-                        </article>
-                    </section>
-                    <section id="section-3" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2015</h3>
-                        <article class="p-3 mt-3 text-dark">
-                            <!-- <h3><span class="px-2">2015</span></h3> -->
-                            <p>Soluta quibusdam ad nostrum vel voluptate delectus sequi dolores quia quaerat officia corrupti, aperiam fugit facere debitis repudiandae praesentium sapiente inventore repellendus, nemo commodi alias!
-                            </p>
-                        </article>
-                    </section>
-                    <section id="section-4" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2016</h3>
-                        <article class="p-3 mt-3  text-dark">
-                            <!-- <h3><span class="px-2">2016</span></h3> -->
-                            <p>Aliquid aliquam magnam ducimus similique obcaecati, unde exercitationem laborum incidunt, quas in ipsum inventore nostrum? Blanditiis optio cumque earum iste odio! Alias sint accusamus repudiandae.
-                            </p>
-                        </article>
-                    </section>
-                    <section id="section-5" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2017</h3>
-                        <article class="p-3 mt-3  text-dark">
-                            <!-- <h3><span class="px-2">2017</span></h3> -->
-                            <p>Officia ipsum fugit iure eaque quisquam error tempore earum enim illum, delectus officiis incidunt corrupti aliquid nam quas perspiciatis eveniet doloremque quod labore? Doloremque, ipsum?
-                            </p>
-                        </article>
-                    </section>
-                    <section id="section-6" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2018</h3>
-                        <article class="p-3 mt-3  text-dark">
-                            <!-- <h3><span class="px-2">2018</span></h3> -->
-                            <p>Aperiam repellat dignissimos fugiat possimus esse, suscipit neque nisi libero alias obcaecati ipsam, porro illo corrupti nostrum reprehenderit unde, illum in laudantium impedit. Modi, veniam.
-                            </p>
-                        </article>
-                    </section>
-                    <section id="section-7" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2019</h3>
-                        <article class="p-3 mt-3  text-dark">
-                            <!-- <h3><span class="px-2">2019</span></h3> -->
-                            <p>Cum asperiores temporibus itaque consequatur quod inventore, quia quis explicabo dicta esse minus voluptatem reiciendis eveniet animi, necessitatibus illum dolorem doloremque repellat placeat, dolores eaque.
-                            </p>
-                        </article>
-                    </section>
-                    <section id="section-8" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2020</h3>
-                        <article class="p-3 mt-3  text-dark">
-                            <!-- <h3><span class="px-2">2020</span></h3> -->
-                            <p>Optio qui, omnis itaque rerum iusto molestiae necessitatibus deleniti quod tenetur id perspiciatis voluptatum dolorum quisquam eius ipsum non architecto labore! Distinctio, tenetur. Officiis, necessitatibus?
-                            </p>
-                        </article>
-                    </section>
-                    <section id="section-9" class="m-auto d-flex  flex-column justify-content-center align-items-center p-3">
-                        <h3 class="p-2 mb-0 text-center w-100">2021</h3>
-                        <article class="p-3 mt-3  text-dark">
-                            <!-- <h3><span class="px-2">2021</span></h3> -->
-                            <p>Rem iste iure blanditiis excepturi esse nisi corrupti sequi, illo, laborum quo quis quaerat assumenda perspiciatis quod fuga vel laudantium doloribus architecto tempora omnis earum!</p>
-                        </article>
-                    </section>
-                
-            </div>
-        </section>
-        <div style="background: #252835; padding-top: 45px;">
-            <footer class="fan-footer fixed-bottom w-100">
-                <div class="container">
-                    <div class="col-lg-12 fan-footer-content">
-                        <div class="row">
-                            <div class="col-lg-12 text-center subscribe">
-                                <a href="give-away.html" class="btn btn-info"> <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-arrow" class="svg-inline--fa fa-location-arrow fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <section id="section-1" class="m-auto d-flex flex-column justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2013</h3>
+                <article class="p-3 mt-3 text-dark">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, blanditiis expedita? Earum
+                        eligendi pariatur quaerat quos expedita ab quibusdam ratione veniam in, mollitia fuga
+                        repudiandae?
+                    </p>
+                </article>
+            </section>
+            <section id="section-2" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2014</h3>
+                <article class="p-3 mt-3 text-dark">
+                    <!-- <h3><span class="px-2">2014</span></h3> -->
+                    <p>Ratione nulla nam, ipsa dignissimos corrupti veniam nostrum, laudantium asperiores sequi numquam
+                        placeat velit voluptate in praesentium non labore unde incidunt laborum maxime quae magni.</p>
+                </article>
+            </section>
+            <section id="section-3" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2015</h3>
+                <article class="p-3 mt-3 text-dark">
+                    <!-- <h3><span class="px-2">2015</span></h3> -->
+                    <p>Soluta quibusdam ad nostrum vel voluptate delectus sequi dolores quia quaerat officia corrupti,
+                        aperiam fugit facere debitis repudiandae praesentium sapiente inventore repellendus, nemo
+                        commodi alias!
+                    </p>
+                </article>
+            </section>
+            <section id="section-4" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2016</h3>
+                <article class="p-3 mt-3  text-dark">
+                    <!-- <h3><span class="px-2">2016</span></h3> -->
+                    <p>Aliquid aliquam magnam ducimus similique obcaecati, unde exercitationem laborum incidunt, quas in
+                        ipsum inventore nostrum? Blanditiis optio cumque earum iste odio! Alias sint accusamus
+                        repudiandae.
+                    </p>
+                </article>
+            </section>
+            <section id="section-5" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2017</h3>
+                <article class="p-3 mt-3  text-dark">
+                    <!-- <h3><span class="px-2">2017</span></h3> -->
+                    <p>Officia ipsum fugit iure eaque quisquam error tempore earum enim illum, delectus officiis
+                        incidunt corrupti aliquid nam quas perspiciatis eveniet doloremque quod labore? Doloremque,
+                        ipsum?
+                    </p>
+                </article>
+            </section>
+            <section id="section-6" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2018</h3>
+                <article class="p-3 mt-3  text-dark">
+                    <!-- <h3><span class="px-2">2018</span></h3> -->
+                    <p>Aperiam repellat dignissimos fugiat possimus esse, suscipit neque nisi libero alias obcaecati
+                        ipsam, porro illo corrupti nostrum reprehenderit unde, illum in laudantium impedit. Modi,
+                        veniam.
+                    </p>
+                </article>
+            </section>
+            <section id="section-7" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2019</h3>
+                <article class="p-3 mt-3  text-dark">
+                    <!-- <h3><span class="px-2">2019</span></h3> -->
+                    <p>Cum asperiores temporibus itaque consequatur quod inventore, quia quis explicabo dicta esse minus
+                        voluptatem reiciendis eveniet animi, necessitatibus illum dolorem doloremque repellat placeat,
+                        dolores eaque.
+                    </p>
+                </article>
+            </section>
+            <section id="section-8" class="m-auto d-flex flex-column  justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2020</h3>
+                <article class="p-3 mt-3  text-dark">
+                    <!-- <h3><span class="px-2">2020</span></h3> -->
+                    <p>Optio qui, omnis itaque rerum iusto molestiae necessitatibus deleniti quod tenetur id
+                        perspiciatis voluptatum dolorum quisquam eius ipsum non architecto labore! Distinctio, tenetur.
+                        Officiis, necessitatibus?
+                    </p>
+                </article>
+            </section>
+            <section id="section-9" class="m-auto d-flex  flex-column justify-content-center align-items-center p-3">
+                <h3 class="p-2 mb-0 text-center w-100">2021</h3>
+                <article class="p-3 mt-3  text-dark">
+                    <!-- <h3><span class="px-2">2021</span></h3> -->
+                    <p>Rem iste iure blanditiis excepturi esse nisi corrupti sequi, illo, laborum quo quis quaerat
+                        assumenda perspiciatis quod fuga vel laudantium doloribus architecto tempora omnis earum!</p>
+                </article>
+            </section>
+
+        </div>
+    </section>
+    <div style="background: #252835; padding-top: 45px;">
+        <footer class="fan-footer fixed-bottom w-100">
+            <div class="container">
+                <div class="col-lg-12 fan-footer-content">
+                    <div class="row">
+                        <div class="col-lg-12 text-center subscribe">
+                            <a href="give-away.html" class="btn btn-info"> <svg aria-hidden="true" focusable="false"
+                                    data-prefix="fas" data-icon="location-arrow"
+                                    class="svg-inline--fa fa-location-arrow fa-w-16" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path fill="currentColor"
                                         d="M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z">
                                     </path>
                                 </svg>SUBSRIBE & GIVE AWAY</a>
-                            </div>
                         </div>
-
                     </div>
-                </div>
-            </footer>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-        <script src="js/fan-page.js"></script>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="js/fan-page.js"></script>
 </body>
 
 </html>
