@@ -85,6 +85,7 @@
         .rcb-history {
             background: #252835;
             color: #fff;
+
         }
 
         .rcb-history ul {
@@ -166,11 +167,42 @@
 
             .year-wraper {
                 overflow-x: scroll;
+                -webkit-overflow-scrolling: touch;
+                -webkit-overflow-scrolling: auto;
+                /* Stops scrolling immediately */
             }
 
             /* Hide scrollbar for Chrome, Safari and Opera */
             .year-wraper::-webkit-scrollbar {
-                display: none;
+                display: block;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+            }
+
+            .year-wraper::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                background-color: #F5F5F5;
+                border-radius: 10px;
+            }
+
+            .year-wraper::-webkit-scrollbar {
+                width: 10px;
+              
+            }
+
+            .year-wraper::-webkit-scrollbar-thumb {
+                width: 20px;
+                background-color: #252835;
+                border-radius: 10px;
+                background-image: -webkit-linear-gradient(0deg,
+                        rgba(255, 255, 255, 0.5) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, 0.5) 50%,
+                        rgba(255, 255, 255, 0.5) 75%,
+                        transparent 75%,
+                        transparent)
             }
 
             /* Hide scrollbar for IE, Edge and Firefox */
