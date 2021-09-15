@@ -93,4 +93,13 @@ document.addEventListener("scroll", function () {
 });
 
 
+//js for fixed header
+document.addEventListener("scroll", function () {
+  var header = document.getElementById("rcb-year");
+  var sticky = header.offsetTop;
+  if (window.pageYOffset > sticky) {
+    header.classList.add("fixed-top");
+  } else {
+    header.classList.remove("fixed-top");
+  }
 });
